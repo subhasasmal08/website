@@ -1,11 +1,31 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
+  background-color: #f9c4ba;
 
+  .logo {
+    width: 98px;
+    height: 58px;
+  }
   .navbar_ul {
     display: flex;
-    gap: 1vw;
     align-items: center;
+    .navbar_title {
+      font-family: "Poppins", "Sans-serif";
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0px 20px 0px 20px;
+      list-style-type: none;
+      transition: all 0.4s ease;
+      text-transform: none;
+      box-sizing: border-box;
+    }
+  }
+  .social_media_icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
