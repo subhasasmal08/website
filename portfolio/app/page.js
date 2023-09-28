@@ -68,16 +68,18 @@ export default class page extends Component {
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
           <div className="benefits_block">
-          {BenefitsData.map((item) => {
-            return (
-              <Benefits
-                icon={item.icon}
-                title={item.title}
-                content={item.content}
-              />
-            );
-          })}
+            {BenefitsData.map((item) => {
+              return (
+                <Benefits
+                  icon={item.icon}
+                  title={item.title}
+                  content={item.content}
+                />
+              );
+            })}
           </div>
+        </div>
+        <div>
         </div>
       </div>
     );
