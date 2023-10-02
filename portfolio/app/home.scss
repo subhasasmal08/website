@@ -1,6 +1,7 @@
-.home_page{
+.home_page {
   .home_page_main_wrapper {
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 80px 0px 0px 0px;
@@ -47,7 +48,7 @@
       }
     }
   }
-  .home_page_benefit{
+  .home_page_benefit {
     display: flex;
     position: relative;
     width: 100%;
@@ -55,34 +56,46 @@
     align-content: flex-start;
     margin-top: 150px;
     margin-bottom: 0px;
-    max-width: 1140px;
     justify-content: center;
 
-    .benefit_header{
+    .benefit_header {
       font-family: "Cormorant Garamond", "Sans-serif";
       font-size: 48px;
       font-weight: 600;
-      color: #4C3347;
+      color: #4c3347;
       display: flex;
       gap: 8px;
-      .benefit_{
+      .benefit_ {
         font-weight: 700;
-        color: #F49785;
+        color: #f49785;
         font-family: "Cormorant Garamond", "Sans-serif";
         font-size: 48px;
       }
     }
-    .benefit_content{
+    .benefit_content {
       padding: 0% 20% 0% 20%;
       text-align: center;
-      color: #685B65;
+      color: #685b65;
       font-family: "Poppins", "Sans-serif";
       font-size: 14px;
       font-weight: 400;
     }
-    .benefits_block{
+    .benefits_block {
+      display: flex;
+    }
+  }
+  .home_page_about {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
     display: flex;
+    justify-content: center;
+
+    .about_image {
+      border-radius: 10px;
+      height: auto;
+      width: 350px;
     }
   }
 }
-

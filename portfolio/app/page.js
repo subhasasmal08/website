@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import Image from "next/image";
 import hero from "../public/assets/Images/hero1.png";
+import about from "../public/assets/Images/about.jpg";
+import lineround from "../public/assets/Images/Line-round.png";
 import "./home.scss";
 import Benefits from "./component/Navbar/Benefits/Benefits";
 
@@ -79,8 +81,11 @@ export default class page extends Component {
             })}
           </div>
         </div>
-        <div>
+        <div className="home_page_about">
+          <Image src={about} alt="about" className="about_image" placeholder="blur" />
+          {/* <Image src={lineround} alt="lineround" className="lineround_image" placeholder="blur" /> */}
         </div>
+        <div></div>
       </div>
     );
   }
