@@ -184,11 +184,178 @@
     margin-bottom: 0px;
     padding: 0px 0px 0px 0px;
     .home_page_provide_lhs {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 0px 0px 0px;
+      padding: 0% 6% 0% 12%;
+      .upper_ {
+        .upper_header {
+          font-size: 48px;
+          font-weight: 600;
+          font-family: "Cormorant Garamond", "Sans-serif";
+        }
+        .provide_desc {
+        }
+      }
+      .lower_ {
+        display: flex;
+        flex-wrap: wrap;
+        .provide_cards {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          .provide_cards_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+
+            .provide_header {
+              color: #4c3347;
+              font-family: "Cormorant Garamond", "Sans-serif";
+              font-size: 25px;
+              font-weight: 600;
+            }
+            .provide_content {
+              color: #7a7a7a;
+              font-family: "Poppins", "Sans-serif";
+              font-size: 14px;
+              font-weight: 600;
+            }
+            .read_more_ {
+              color: #c267d1;
+              font-family: "Poppins", "Sans-serif";
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
     }
     .home_page_provide_rhs {
-      .about_image{
+      .about_image {
         border-radius: 10px;
       }
+    }
+  }
+  .home_page_plan {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    padding: 90px 0px 90px 0px;
+    background-color: #fef4ea;
+    .home_page_plan_wrapper {
+      padding: 10px;
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .plan_header {
+        font-size: 48px;
+        font-weight: 600;
+        font-family: "Cormorant Garamond", "Sans-serif";
+      }
+      .plan_card_content {
+        color: #685b65;
+        font-family: "Poppins", "Sans-serif";
+        font-size: 14px;
+        font-weight: 400;
+        width: 320px;
+        text-align: center;
+      }
+      .plan_cards_wrapper {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        max-width: 1140px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s, border 0.3s, border-radius 0.3s,
+          box-shadow 0.3s;
+        .plan_card {
+          flex-direction: column;
+          background-color: #ffffff;
+          padding: 50px;
+          display: flex;
+          position: relative;
+          width: 100%;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          justify-content: center;
+          .upper_plan_card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .plan_card_header {
+              font-size: 24px;
+              font-weight: 500;
+              font-family: "Poppins", "Sans-serif";
+            }
+            .plan_subheader {
+              color: #7a7a7a;
+              font-size: 14px;
+              font-weight: 400;
+              font-family: "Poppins", "Sans-serif";
+            }
+          }
+          .plan_content {
+            text-align: left;
+            .tick_sen{
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+              font-weight: 400;
+              font-family: "Poppins", "Sans-serif";
+              color: #4C3347;
+            }
+          }
+          .line {
+            padding: 0px;
+            border-style: dashed;
+            color: #f9c4ba;
+          }
+          .pricing_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .plan_btn {
+              font-family: "Poppins", "Sans-serif";
+              font-size: 18px;
+              font-weight: 500;
+              fill: #ffffff;
+              color: #ffffff;
+              background-color: #c267d1;
+              border-radius: 30px 30px 30px 30px;
+              padding: 15px 35px 15px 35px;
+              display: flex;
+              align-items: center;
+              border: none;
+            }
+          }
+        }
+        .middle {
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  .home_page_review_section{
+    .Bg{
+      width: 100%;
+      height: 100%;
+    }
+    .review_subwrapper{
+      transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 150px 0px 150px 0px;
     }
   }
 }
