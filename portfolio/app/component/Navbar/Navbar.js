@@ -81,7 +81,7 @@ const Page = (props) => {
 
 export default Page;
 
-const Insta = (props) => (
+export const Insta = (props) => (
   <svg
     fill="#383740"
     width="16px"
@@ -95,7 +95,7 @@ const Insta = (props) => (
   </svg>
 );
 
-const Twitter = (props) => (
+export const Twitter = (props) => (
   <svg
     fill="#383740"
     width="16px"
@@ -109,7 +109,7 @@ const Twitter = (props) => (
   </svg>
 );
 
-const Youtube = (props) => (
+export const Youtube = (props) => (
   <svg
     fill="#383740"
     width="16px"

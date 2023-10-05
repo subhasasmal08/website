@@ -6,8 +6,11 @@ import about from "../public/assets/Images/about.jpg";
 import lineround from "../public/assets/Images/Line-round.png";
 import blob from "../public/assets/Images/blob.png";
 import Bg from "../public/assets/Images/Bg-6.png";
+import Bg1 from "../public/assets/Images/Bg-1.png";
 import "./home.scss";
 import Benefits from "./component/Navbar/Benefits/Benefits";
+import logo from "../public/assets/Images/Logo_Lyfes-3-01.png";
+import { Insta, Twitter, Youtube } from "./component/Navbar/Navbar";
 
 export default class page extends Component {
   BenefitsData = [
@@ -111,6 +114,69 @@ export default class page extends Component {
       price: "$65/Month",
     },
   ];
+
+  renderReviewData = [
+    {
+      icon: "https://source.unsplash.com/random/200x200?sig=1",
+      name: "Cintya Hiott",
+      role: "Entrepreneur",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
+    },
+    {
+      icon: "https://source.unsplash.com/random/200x200?sig=1",
+      name: "Dipesh Adekar",
+      role: "CEO",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      icon: "https://source.unsplash.com/random/200x200?sig=1",
+      name: "Sneha Sasmal",
+      role: "Kid",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
+    },
+    {
+      icon: "https://source.unsplash.com/random/200x200?sig=1",
+      name: "Rupam Sasmal",
+      role: "Idiot",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
+    },
+  ];
+
+  renderBlogCards = [
+    {
+      image: "https://source.unsplash.com/random/200x200?sig=1",
+      header: "How we accept failure",
+      date: "November 5, 2020",
+      content:
+        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
+    },
+    {
+      image: "https://source.unsplash.com/random/200x200?sig=1",
+      header: "How we accept failure",
+      date: "November 5, 2020",
+      content:
+        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
+    },
+    {
+      image: "https://source.unsplash.com/random/200x200?sig=1",
+      header: "How we accept failure",
+      date: "November 5, 2020",
+      content:
+        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
+    },
+    {
+      image: "https://source.unsplash.com/random/200x200?sig=1",
+      header: "How we accept failure",
+      date: "November 5, 2020",
+      content:
+        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
+    },
+  ];
+
   render() {
     return (
       <div className="home_page">
@@ -286,8 +352,113 @@ export default class page extends Component {
           </div>
         </div>
         <div className="home_page_review_section">
-          <Image src={Bg} alt="Bg" className="Bg" placeholder="blur" />
-          <div className="review_subwrapper"></div>
+          <div style={{ objectFit: "contain" }}>
+            <Image src={Bg} alt="Bg" className="Bg" placeholder="blur" />
+          </div>
+          <div className="review_subwrapper">
+            <div className="review_lhs">
+              <h2 className="review_header">
+                What <span style={{ color: "#C267D1" }}>They Say</span>
+              </h2>
+              <p className="review_content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.
+              </p>
+            </div>
+            <div className="review_slider">
+              {this.renderReviewData.map((data) => {
+                return (
+                  <div className="slider_wrapper">
+                    <div className="slider_upper_wrapper">{data.content}</div>
+                    <div className="slider_lower_wrapper">
+                      <img className="review_pic" src={data.icon}></img>
+                      <div style={{ display: "flex" }}>
+                        <div
+                          style={{ display: "flex", flexDirection: "column" }}
+                        >
+                          <span>{data.name}</span>
+                          <span>{data.role}</span>
+                        </div>
+                      </div>
+                      <Quotes />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="home_page_blog">
+          <div className="blog_wrapper">
+            <h2 className="blog_header">
+              Latest <span style={{ color: "#C267D1" }}>Blog</span>
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className="blog_cards_Wrapper">
+              {this.renderBlogCards.map((item) => {
+                return (
+                  <div className="blog_card">
+                    <img src={item.image} className="blog_image"></img>
+                    <p>{item.header}</p>
+                    <p>{item.date}</p>
+                    <p>{item.content}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <Image src={Bg1} alt="Bg1" className="Bg1" placeholder="blur" />
+          <div className="contact_wrapper">
+            <p>Subscribe to newsletter</p>
+            <p>Get notified for our latest news and offers</p>
+            <div className="input_">
+              <input
+                className="email_input"
+                placeholder="Your email address"
+              ></input>
+              <button className="contact_btn">Subscribe Now</button>
+            </div>
+          </div>
+
+          <div className="upper_footer">
+            <div className="lhs_footer_wrapper">
+              <p>Connect</p>
+              <p>Jalan Batu Mejan, Canggu, Badung Regency, Bali</p>
+              <p>(+62) 8123 456 789</p>
+              <p>support@domain.com</p>
+            </div>
+            <div className="mid_footer_wrapper">
+              <Image
+                src={logo}
+                alt="logo"
+                className="logo"
+                placeholder="blur"
+              />
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus.
+              </p>
+              <div className="social_media_icons">
+                <Insta className="insta" />
+                <Twitter className="twitter" />
+                <Youtube className="youtube" />
+              </div>
+            </div>
+            <div className="rhs_footer_wrapper">
+              <p>Navigation</p>
+              <p>About</p>
+              <p>Service</p>
+              <p>Blog</p>
+              <p>Contact</p>
+            </div>
+          </div>
+          <div className="lower_footer">
+            <p>Lyfes Template Kit by Jegtheme</p>
+            <p>Copyright © 2021. All rights reserved.</p>
+          </div>
         </div>
         <div></div>
       </div>
@@ -317,6 +488,20 @@ const Tick = (props) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
+  </svg>
+);
+
+const Quotes = (props) => (
+  <svg
+    fill="#F4978575"
+    width="45px"
+    height="45px"
+    viewBox="0 0 256 256"
+    id="Flat"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M100,52H40A20.02292,20.02292,0,0,0,20,72v64a20.02292,20.02292,0,0,0,20,20H96v4a28.03146,28.03146,0,0,1-28,28,12,12,0,0,0,0,24,52.059,52.059,0,0,0,52-52V72A20.02292,20.02292,0,0,0,100,52Zm-4,80H44V76H96ZM216,52H156a20.02292,20.02292,0,0,0-20,20v64a20.02292,20.02292,0,0,0,20,20h56v4a28.03146,28.03146,0,0,1-28,28,12,12,0,0,0,0,24,52.059,52.059,0,0,0,52-52V72A20.02292,20.02292,0,0,0,216,52Zm-4,80H160V76h52Z" />
   </svg>
 );
 
