@@ -1,0 +1,36 @@
+.home_page_blog {
+    margin-top: 150px;
+    margin-bottom: 50px;
+
+    .blog_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+      max-width: 1140px;
+      .blog_header {
+        font-family: "Cormorant Garamond", "Sans-serif";
+        font-size: 48px;
+        font-weight: 600;
+        color: #4c3347;
+      }
+      .blog_cards_Wrapper {
+        display: flex;
+        gap: 25px;
+        .blog_card {
+          .blog_image {
+            height: 300px;
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          }
+        }
+      }
+    }
+  }

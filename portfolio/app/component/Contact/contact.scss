@@ -1,0 +1,21 @@
+.service_contact_rhs {
+    background-color: #fef4ea;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
+    padding: 35px 20px 35px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .upper_ {
+      display: flex;
+    }
+    .mid_ {
+    }
+    .lower_ {
+    }
+  }

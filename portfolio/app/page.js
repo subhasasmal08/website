@@ -1,471 +1,35 @@
 "use client";
 import React, { Component } from "react";
-import Image from "next/image";
-import hero from "../public/assets/Images/hero1.png";
-import about from "../public/assets/Images/about.jpg";
-import lineround from "../public/assets/Images/Line-round.png";
-import blob from "../public/assets/Images/blob.png";
-import Bg from "../public/assets/Images/Bg-6.png";
-import Bg1 from "../public/assets/Images/Bg-1.png";
 import "./home.scss";
-import Benefits from "./component/Navbar/Benefits/Benefits";
-import logo from "../public/assets/Images/Logo_Lyfes-3-01.png";
-import { Insta, Twitter, Youtube } from "./component/Navbar/Navbar";
+import BenefitComponent from "./component/BenefitComponent/BenefitComponent";
+import AboutComponent from "./component/AboutComponent/AboutComponent";
+import ProvideComponent from "./component/ProvideComponent/ProvideComponent";
+import PlanComponent from "./component/PlanComponent/PlanComponent";
+import ReviewComponent from "./component/ReviewComponent/ReviewComponent";
+import ConsultationComponent from "./component/ConsultationComponent/ConsultationComponent";
+import BlogComponent from "./component/BlogComponent/BlogComponent";
+import Footer from "./component/Footer/Footer";
+import HomeComponent from "./component/HomeComponent/HomeComponent";
 
 export default class page extends Component {
-  BenefitsData = [
-    {
-      icon: <Star />,
-      title: "Achieve Life Goals",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    },
-    {
-      icon: <Consultancy />,
-      title: "Ask Consultancy ",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    },
-    {
-      icon: <Mindfullness />,
-      title: "Mindfullness",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    },
-    {
-      icon: <SelfDevelopment />,
-      title: "Self Development",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-    },
-  ];
-
-  renderCountDivData = [
-    { name: "persons_mentored", number: 80 },
-    { name: "seminar_speaker", number: 35 },
-    { name: "coaching_certificates", number: 12 },
-  ];
-
-  renderProvideData = [
-    {
-      header: "Identifying Passion",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      icon: <Direction />,
-    },
-    {
-      header: "Stress Control",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      icon: <StressControl />,
-    },
-    {
-      header: "Problem Solving",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      icon: <ProblemSolving />,
-    },
-    {
-      header: "Growth Career",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-      icon: <GrowthCareer />,
-    },
-  ];
-
-  renderPlanData = [
-    {
-      icon: <Plan />,
-      header: "Base Plan",
-      Subheader: "What you'll get",
-      points: [
-        "1 on 1 Session",
-        "100 Minutes Session",
-        "Career Counselling",
-        "Customize Goal Path",
-        "Development Perspective",
-        "Career Advice",
-      ],
-      price: "$65/Month",
-    },
-    {
-      icon: <Plan />,
-      header: "Pro Plan",
-      Subheader: "What you'll get",
-      points: [
-        "1 on 1 Session",
-        "100 Minutes Session",
-        "Career Counselling",
-        "Customize Goal Path",
-        "Development Perspective",
-        "Career Advice",
-        "Support Over Email",
-      ],
-      price: "$65/Month",
-    },
-    {
-      icon: <Plan />,
-      header: "Elite Plan",
-      Subheader: "What you'll get",
-      points: [
-        "1 on 1 Session",
-        "100 Minutes Session",
-        "Career Counselling",
-        "Customize Goal Path",
-        "Development Perspective",
-        "Career Advice",
-      ],
-      price: "$65/Month",
-    },
-  ];
-
-  renderReviewData = [
-    {
-      icon: "https://source.unsplash.com/random/200x200?sig=1",
-      name: "Cintya Hiott",
-      role: "Entrepreneur",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
-    },
-    {
-      icon: "https://source.unsplash.com/random/200x200?sig=1",
-      name: "Dipesh Adekar",
-      role: "CEO",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      icon: "https://source.unsplash.com/random/200x200?sig=1",
-      name: "Sneha Sasmal",
-      role: "Kid",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
-    },
-    {
-      icon: "https://source.unsplash.com/random/200x200?sig=1",
-      name: "Rupam Sasmal",
-      role: "Idiot",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    ",
-    },
-  ];
-
-  renderBlogCards = [
-    {
-      image: "https://source.unsplash.com/random/200x200?sig=1",
-      header: "How we accept failure",
-      date: "November 5, 2020",
-      content:
-        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
-    },
-    {
-      image: "https://source.unsplash.com/random/200x200?sig=1",
-      header: "How we accept failure",
-      date: "November 5, 2020",
-      content:
-        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
-    },
-    {
-      image: "https://source.unsplash.com/random/200x200?sig=1",
-      header: "How we accept failure",
-      date: "November 5, 2020",
-      content:
-        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
-    },
-    {
-      image: "https://source.unsplash.com/random/200x200?sig=1",
-      header: "How we accept failure",
-      date: "November 5, 2020",
-      content:
-        "loremj jhAd madgaidad ushdkja ha dajdjhuadb bzjddflks fdhnz dgziuhdzudiyiufns fuhds fiuihsf dfiusfsbfjhbz dzyu gaa auweyuia yj eahueui e8yq",
-    },
-  ];
-
   render() {
     return (
       <div className="home_page">
-        <div className="home_page_main_wrapper">
-          <div className="partition_wrapper">
-            <div className="lhs_wrapper">
-              <h1 className="lhs_header">
-                Support your personal development and chase your dream
-              </h1>
-              <p className="lhs_subheader">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
-              </p>
-              <button className="lhs_button">Get Started Today</button>
-            </div>
-            <div className="rhs_wrapper">
-              <Image
-                src={hero}
-                alt="hero"
-                className="hero"
-                placeholder="blur"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="home_page_benefit">
-          <h2 className="benefit_header">
-            Coaching
-            <span className="benefit_">Benefit</span>
-          </h2>
-          <p className="benefit_content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-          </p>
-          <div className="benefits_block">
-            {this.BenefitsData.map((item) => {
-              return (
-                <Benefits
-                  icon={item.icon}
-                  title={item.title}
-                  content={item.content}
-                />
-              );
-            })}
-          </div>
-        </div>
-        <div className="home_page_about">
-          <div className="home_page_about_lhs">
-            <h2 className="about_me_">About Me</h2>
-            <div className="count_wrapper">
-              {this.renderCountDivData.map((item) => {
-                return (
-                  <div className="count_subwrapper">
-                    <h2 className="count_">{item.number}</h2>
-                    <span>{item.name.replaceAll("_", " ")}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="home_page_about_rhs">
-            <h2 className="description_header">
-              Hi, I'm <span style={{ color: "#F49785" }}>Subha</span>
-            </h2>
-            <div className="description_">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
-            </div>
-            <button className="read_more_button">Read more</button>
-          </div>
-          <div className="home_page_about_image">
-            <Image
-              src={about}
-              alt="about"
-              className="about_image"
-              placeholder="blur"
-            />
-            <Image
-              src={lineround}
-              alt="lineround"
-              className="lineround_image"
-              placeholder="blur"
-            />
-            <Image
-              src={blob}
-              alt="blob"
-              className="blob_image"
-              placeholder="blur"
-            />
-          </div>
-        </div>
-        <div className="home_page_provide">
-          <div className="home_page_provide_lhs">
-            <div className="upper_">
-              <h2 className="upper_header">
-                What I <span style={{ color: "#F49785" }}>Provide</span>
-              </h2>
-              <div className="provide_desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Aliquam ut porttitor leo.
-              </div>
-            </div>
-            <div className="lower_">
-              {this.renderProvideData.map((item) => {
-                return (
-                  <div className="provide_cards">
-                    {item.icon}
-                    <div className="provide_cards_wrapper">
-                      <p className="provide_header">{item.header}</p>
-                      <div className="provide_content">{item.desc}</div>
-                      <div className="read_more_">
-                        Read more
-                        <Arrow />{" "}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="home_page_provide_rhs">
-            <Image
-              src={about}
-              alt="about"
-              className="about_image"
-              placeholder="blur"
-            />
-          </div>
-        </div>
-        <div className="home_page_plan">
-          <div className="home_page_plan_wrapper">
-            <h2 className="plan_header">
-              Learn the secrets to{" "}
-              <span style={{ color: "#c267d1" }}>Life Success</span>
-            </h2>
-            <p className="plan_card_content">
-              Maximize your potentials now, several bundle packages that you can
-              choose
-            </p>
-            <div className="plan_cards_wrapper">
-              {this.renderPlanData.map((item, index) => {
-                return (
-                  <div
-                    className={index === 1 ? "plan_card middle" : "plan_card"}
-                  >
-                    <div className="upper_plan_card">
-                      {item.icon}
-                      <p className="plan_card_header">{item.header}</p>
-                      <p className="plan_subheader">{item.Subheader}</p>
-                    </div>
-                    <div className="plan_content">
-                      {item.points.map((data) => {
-                        return (
-                          <p className="tick_sen">
-                            <Tick />
-                            {data}
-                          </p>
-                        );
-                      })}
-                    </div>
-                    <p className="line"></p>
-                    <div className="pricing_wrapper">
-                      <p>{item.price}</p>
-                      <button className="plan_btn">Book a session</button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="home_page_review_section">
-          <div style={{ objectFit: "contain" }}>
-            <Image src={Bg} alt="Bg" className="Bg" placeholder="blur" />
-          </div>
-          <div className="review_subwrapper">
-            <div className="review_lhs">
-              <h2 className="review_header">
-                What <span style={{ color: "#C267D1" }}>They Say</span>
-              </h2>
-              <p className="review_content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
-              </p>
-            </div>
-            <div className="review_slider">
-              {this.renderReviewData.map((data) => {
-                return (
-                  <div className="slider_wrapper">
-                    <div className="slider_upper_wrapper">{data.content}</div>
-                    <div className="slider_lower_wrapper">
-                      <img className="review_pic" src={data.icon}></img>
-                      <div style={{ display: "flex" }}>
-                        <div
-                          style={{ display: "flex", flexDirection: "column" }}
-                        >
-                          <span>{data.name}</span>
-                          <span>{data.role}</span>
-                        </div>
-                      </div>
-                      <Quotes />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="home_page_blog">
-          <div className="blog_wrapper">
-            <h2 className="blog_header">
-              Latest <span style={{ color: "#C267D1" }}>Blog</span>
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div className="blog_cards_Wrapper">
-              {this.renderBlogCards.map((item) => {
-                return (
-                  <div className="blog_card">
-                    <img src={item.image} className="blog_image"></img>
-                    <p>{item.header}</p>
-                    <p>{item.date}</p>
-                    <p>{item.content}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <Image src={Bg1} alt="Bg1" className="Bg1" placeholder="blur" />
-          <div className="contact_wrapper">
-            <p>Subscribe to newsletter</p>
-            <p>Get notified for our latest news and offers</p>
-            <div className="input_">
-              <input
-                className="email_input"
-                placeholder="Your email address"
-              ></input>
-              <button className="contact_btn">Subscribe Now</button>
-            </div>
-          </div>
-
-          <div className="upper_footer">
-            <div className="lhs_footer_wrapper">
-              <p>Connect</p>
-              <p>Jalan Batu Mejan, Canggu, Badung Regency, Bali</p>
-              <p>(+62) 8123 456 789</p>
-              <p>support@domain.com</p>
-            </div>
-            <div className="mid_footer_wrapper">
-              <Image
-                src={logo}
-                alt="logo"
-                className="logo"
-                placeholder="blur"
-              />
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus.
-              </p>
-              <div className="social_media_icons">
-                <Insta className="insta" />
-                <Twitter className="twitter" />
-                <Youtube className="youtube" />
-              </div>
-            </div>
-            <div className="rhs_footer_wrapper">
-              <p>Navigation</p>
-              <p>About</p>
-              <p>Service</p>
-              <p>Blog</p>
-              <p>Contact</p>
-            </div>
-          </div>
-          <div className="lower_footer">
-            <p>Lyfes Template Kit by Jegtheme</p>
-            <p>Copyright © 2021. All rights reserved.</p>
-          </div>
-        </div>
+        <HomeComponent />
+        <BenefitComponent />
+        <AboutComponent />
+        <ProvideComponent type={"home_service"} />
+        <PlanComponent />
+        <ReviewComponent />
+        <ConsultationComponent />
+        <BlogComponent />
+        <Footer />
         <div></div>
       </div>
     );
   }
 }
-const Tick = (props) => (
+export const Tick = (props) => (
   <svg
     width="20px"
     height="20px"
@@ -491,7 +55,7 @@ const Tick = (props) => (
   </svg>
 );
 
-const Quotes = (props) => (
+export const Quotes = (props) => (
   <svg
     fill="#F4978575"
     width="45px"
@@ -505,7 +69,7 @@ const Quotes = (props) => (
   </svg>
 );
 
-const Plan = (props) => (
+export const Plan = (props) => (
   <svg
     id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -530,7 +94,7 @@ const Plan = (props) => (
   </svg>
 );
 
-const Arrow = (props) => (
+export const Arrow = (props) => (
   <svg
     fill="#c267d1"
     width="20px"
@@ -544,7 +108,7 @@ const Arrow = (props) => (
   </svg>
 );
 
-const Star = (props) => (
+export const Star = (props) => (
   <svg
     fill="#F49785"
     width="45px"
@@ -557,7 +121,7 @@ const Star = (props) => (
   </svg>
 );
 
-const Consultancy = (props) => (
+export const Consultancy = (props) => (
   <svg
     id="Uploaded to svgrepo.com"
     xmlns="http://www.w3.org/2000/svg"
@@ -577,7 +141,7 @@ const Consultancy = (props) => (
   </svg>
 );
 
-const Mindfullness = (props) => (
+export const Mindfullness = (props) => (
   <svg
     fill="#F49785"
     width="45px"
@@ -603,7 +167,7 @@ const Mindfullness = (props) => (
   </svg>
 );
 
-const SelfDevelopment = (props) => (
+export const SelfDevelopment = (props) => (
   <svg
     fill="#F49785"
     width="45px"
@@ -617,7 +181,7 @@ const SelfDevelopment = (props) => (
   </svg>
 );
 
-const Direction = (props) => (
+export const Direction = (props) => (
   <svg
     fill="#F49785"
     width="40px"
@@ -630,7 +194,7 @@ const Direction = (props) => (
   </svg>
 );
 
-const StressControl = (props) => (
+export const StressControl = (props) => (
   <svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -648,7 +212,7 @@ const StressControl = (props) => (
   </svg>
 );
 
-const ProblemSolving = (props) => (
+export const ProblemSolving = (props) => (
   <svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -669,7 +233,7 @@ const ProblemSolving = (props) => (
   </svg>
 );
 
-const GrowthCareer = (props) => (
+export const GrowthCareer = (props) => (
   <svg
     width="40px"
     height="40px"

@@ -1,0 +1,24 @@
+.blog_wrapper{
+    .blog_top_wrapper {
+        transition: background 0.3s, border 0.3s, border-radius 0.3s,
+          box-shadow 0.3s;
+        padding: 100px 0px 100px 0px;
+        background-color: #f9c4ba;
+        position: relative;
+        text-align: center;
+        .blog_header {
+          color: #4c3347;
+          font-family: "Cormorant Garamond", "Sans-serif";
+          font-size: 64px;
+          font-weight: 700;
+        }
+        .blog_content {
+          transition: background 0.3s, border 0.3s, border-radius 0.3s,
+            box-shadow 0.3s, transform var(--e-transform-transition-duration, 0.4s);
+          color: #685b65;
+          font-size: 14px;
+          font-weight: 400;
+          font-family: "Poppins", "Sans-serif";
+        }
+      }
+}
