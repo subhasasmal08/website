@@ -72,8 +72,8 @@ export default class page extends Component {
                 <p>By Email : support@domain.com</p>
                 <p>By Phone : (+62) 8123 456 789</p>
                 <div>
-                  On Social :{" "}
-                  <div className="social_media_icons">
+                  On Social :
+                  <div className="social_media_icons"> 
                     <Insta className="insta" />
                     <Twitter className="twitter" />
                     <Youtube className="youtube" />

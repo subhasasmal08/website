@@ -21,7 +21,7 @@ export default class AboutComponent extends Component {
                 return (
                   <div className="count_subwrapper">
                     <h2 className="count_">{item.number}</h2>
-                    <span>{item.name.replaceAll("_", " ")}</span>
+                    <span className='count_type'>{item.name.replaceAll("_", " ")}</span>
                   </div>
                 );
               })}

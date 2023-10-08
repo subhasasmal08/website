@@ -22,18 +22,35 @@
         flex-direction: column;
         top: 20%;
         left: 24%;
+        gap: 20px;
         .count_subwrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           .count_ {
             display: flex;
             justify-content: center;
+            color: #4C3347;
+            font-family: "Poppins", "Sans-serif";
+            font-weight: 500;
+            font-size: 40px;
+            margin: 0;
+          }
+          .count_type{
+            color: #F49785;
+            font-family: "Poppins", "Sans-serif";
+            font-weight: 400;
+            font-size: 20px;
+            margin: 0;
           }
         }
       }
     }
     .home_page_about_rhs {
       position: absolute;
-      right: 10%;
-      top: 25%;
+      right: 16%;
+      top: 15%;
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -42,15 +59,16 @@
         font-family: "Cormorant Garamond", "Sans-serif";
         font-size: 48px;
         font-weight: 600;
+        margin-bottom: 0px;
       }
 
       .description_ {
-        width: 260px;
+        width: 280px;
         padding: 0% 5% 0% 0%;
         color: #685b65;
         font-family: "Poppins", "Sans-serif";
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
       }
 
     }
@@ -65,8 +83,8 @@
         position: absolute;
         width: 180px;
         height: 180px;
-        top: -16%;
-        right: 32%;
+        top: -15%;
+        right: 33%;
       }
       .blob_image {
         position: absolute;
