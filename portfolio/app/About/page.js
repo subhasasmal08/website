@@ -8,7 +8,7 @@ import BlogComponent from "../component/BlogComponent/BlogComponent";
 import Footer from "../component/Footer/Footer";
 import journey from "../../public/assets/Images/journey.jpeg";
 import lineround from "../../public/assets/Images/Line-round.png";
-import blob from "../../public/assets/Images/blob.png";
+import blob from "../../public/assets/Images/Blob.png";
 
 export default class page extends Component {
   renderJourneyData = [

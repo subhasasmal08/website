@@ -21,8 +21,68 @@
       transition: all 0.4s ease;
       text-transform: none;
       box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .down_icon {
+        opacity: 0.6;
+      }
+      .dd_pages {
+        display: none;
+      }
+      .dd_blog {
+        display: none;
+      }
+      .page_tag {
+        position: relative;
+        top: 0;
+      }
+      .page_tag:hover .dd_pages {
+        background-color: #fef4ea;
+        border-radius: 0px 0px 0px 0px;
+        min-width: 220px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        display: block;
+        z-index: 1;
+
+        .plans {
+          padding: 15px;
+          color: #383740;
+          font-size: 14px;
+          font-weight: 400;
+          border-style: solid;
+          border-width: 0px 0px 1px 0px;
+          border-color: #ffffff;
+        }
+      }
+
+      .blog_tag:hover .dd_blog {
+        background-color: #fef4ea;
+        border-radius: 0px 0px 0px 0px;
+        min-width: 220px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        display: block;
+        z-index: 1;
+
+        .blogs {
+          padding: 15px;
+          color: #383740;
+          font-size: 14px;
+          font-weight: 400;
+          border-style: solid;
+          border-width: 0px 0px 1px 0px;
+          border-color: #ffffff;
+        }
+      }
+    }
+    .active{
+      color: #C267D1;
     }
   }
+
   .social_media_icons {
     display: flex;
     align-items: center;

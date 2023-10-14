@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "./contact.scss";
 import Footer from "../component/Footer/Footer";
 import Contact from "../component/Contact/Contact";
+import BigStar from "../../public/assets/Images/Bigstar.png";
+import Image from "next/image";
 
 export default class page extends Component {
   RenderContactCards = [
@@ -26,7 +28,22 @@ export default class page extends Component {
     return (
       <div className="contact_wrapper">
         <div className="contact_top_wrapper">
-          <h2 className="contact_header">contacts</h2>
+          <div className="contact_header">
+          <Image
+            src={BigStar}
+            alt="BigStar"
+            className="bigstar_image"
+            placeholder="blur"
+          />
+          <h2 className="contact_">Contacts</h2>
+          <Image
+            src={BigStar}
+            alt="smallStar"
+            className="smallstar_image"
+            placeholder="blur"
+          />
+          </div>
+   
           <p className="contact_content">Reach me by filling form below</p>
         </div>
         <div className="contact_cards_wrapper">

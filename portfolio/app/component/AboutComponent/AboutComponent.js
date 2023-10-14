@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./aboutcomponent.scss"
 import about from "../../../public/assets/Images/about.jpg";
 import lineround from "../../../public/assets/Images/Line-round.png";
-import blob from "../../../public/assets/Images/blob.png";
+import blob from "../../../public/assets/Images/Blob.png";
 
 export default class AboutComponent extends Component {
     renderCountDivData = [

@@ -1,21 +1,47 @@
 .service_contact_rhs {
-    background-color: #fef4ea;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s,
-      box-shadow 0.3s;
-    padding: 35px 20px 35px 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
+  background-color: #fef4ea;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 35px 20px 35px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
 
-    .upper_ {
-      display: flex;
-    }
-    .mid_ {
-    }
-    .lower_ {
-    }
+  .input_ {
+    border: none;
+    font-size: 16px;
+    font-family: "Poppins", "Sans-serif";
+    font-weight: 400;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    border-color: #f9c4ba;
   }
+
+  label {
+    color: #4c3347;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins", "Sans-serif";
+  }
+
+  label::after {
+    color: #c267d1;
+    content: attr(req);
+    font-weight: 400;
+    margin-left: 0.1vw;
+  }
+
+  .upper_ {
+    display: flex;
+    gap: 16px;
+  }
+  .mid_ {
+  }
+  .lower_ {
+  }
+}
