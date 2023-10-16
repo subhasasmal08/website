@@ -53,7 +53,6 @@
       background-color: #fef4ea;
       transition: background 0.3s, border 0.3s, border-radius 0.3s,
         box-shadow 0.3s;
-      margin: 20px 25px 20px 0px;
       padding: 45px 25px 45px 25px;
       display: flex;
       justify-content: center;
@@ -78,12 +77,12 @@
     }
   }
   .contact_form_wrapper {
-    padding: 20px 0px 80px 0px;
     display: flex;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1140px;
     .form_subwrapper {
-      display: flex;
-      max-width: 1140px;
       display: flex;
       margin-right: auto;
       margin-left: auto;
@@ -94,11 +93,61 @@
         display: flex;
         flex-direction: column;
         width: 50%;
+        padding: 0px 60px 0px 0px;
         .form_header {
           color: #4c3347;
           font-family: "Cormorant Garamond", "Sans-serif";
-          font-size: 64px;
-          font-weight: 700;
+          font-size: 48px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        .contact_desc {
+          font-size: 14px;
+          font-weight: 400;
+          font-family: "Poppins", "Sans-serif";
+          color: #7a7a7a;
+        }
+
+        .social_media_wrapper {
+          display: flex;
+          gap: 10px;
+          .social_media_tag {
+            color: #4c3347;
+            font-family: "Cormorant Garamond", "Sans-serif";
+            font-size: 25px;
+            font-weight: 600;
+          }
+
+          .social_media_icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            .insta {
+              background-color: #fff;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+            }
+            .twitter {
+              background-color: #fff;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+            }
+            .youtube {
+              background-color: #fff;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+            }
+            .facebook {
+              background-color: #fff;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+            }
+          }
         }
       }
 

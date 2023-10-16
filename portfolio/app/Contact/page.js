@@ -5,6 +5,7 @@ import Footer from "../component/Footer/Footer";
 import Contact from "../component/Contact/Contact";
 import BigStar from "../../public/assets/Images/Bigstar.png";
 import Image from "next/image";
+import { FaceBook, Insta, Twitter, Youtube } from "../component/Navbar/Navbar";
 
 export default class page extends Component {
   RenderContactCards = [
@@ -29,21 +30,21 @@ export default class page extends Component {
       <div className="contact_wrapper">
         <div className="contact_top_wrapper">
           <div className="contact_header">
-          <Image
-            src={BigStar}
-            alt="BigStar"
-            className="bigstar_image"
-            placeholder="blur"
-          />
-          <h2 className="contact_">Contacts</h2>
-          <Image
-            src={BigStar}
-            alt="smallStar"
-            className="smallstar_image"
-            placeholder="blur"
-          />
+            <Image
+              src={BigStar}
+              alt="BigStar"
+              className="bigstar_image"
+              placeholder="blur"
+            />
+            <h2 className="contact_">Contacts</h2>
+            <Image
+              src={BigStar}
+              alt="smallStar"
+              className="smallstar_image"
+              placeholder="blur"
+            />
           </div>
-   
+
           <p className="contact_content">Reach me by filling form below</p>
         </div>
         <div className="contact_cards_wrapper">
@@ -62,11 +63,22 @@ export default class page extends Component {
         <div className="contact_form_wrapper">
           <div className="form_subwrapper">
             <div className="form_lhs">
-              <h2 className="form_header">Get In Touch</h2>
-              <p>
+              <h2 className="form_header">
+                Get In <span style={{ color: "#C267D1" }}>Touch</span>
+              </h2>
+              <p className="contact_desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
+              <div className="social_media_wrapper">
+                <p className="social_media_tag">Social Media:</p>
+                <div className="social_media_icons">
+                  <Insta className="insta" />
+                  <Twitter className="twitter" />
+                  <Youtube className="youtube" />
+                  <FaceBook className="facebook" />
+                </div>
+              </div>
             </div>
             <div className="form_rhs">
               <Contact />

@@ -13,8 +13,8 @@ export default class Footer extends Component {
         <div className="footer">
         <Image src={Bg1} alt="Bg1" className="Bg1" placeholder="blur" />
         <div className="contact_wrapper">
-          <p>Subscribe to newsletter</p>
-          <p>Get notified for our latest news and offers</p>
+          <p className='subscribe_'>Subscribe to newsletter</p>
+          <p className='notify_'>Get notified for our latest news and offers</p>
           <div className="input_">
             <input
               className="email_input"

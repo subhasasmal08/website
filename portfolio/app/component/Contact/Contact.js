@@ -6,23 +6,23 @@ export default class Contact extends Component {
     return (
       <div className="service_contact_rhs">
         <div className="upper_">
-          <div>
+          <div className="input_wrapper">
             <label req={"*"}>First Name </label>
             <input className="input_" />
           </div>
-          <div>
+          <div className="input_wrapper">
             <label req={"*"}>Last Name </label>
             <input className="input_" />
           </div>
         </div>
         <div className="mid_">
-          <div>
+          <div className="input_wrapper">
             <label req={"*"}>Email Address </label>
             <input className="input_" />
           </div>
         </div>
         <div className="lower_">
-          <div>
+          <div className="input_wrapper">
             <label req={"*"}>Questions </label>
             <textarea className="input_" />
           </div>
