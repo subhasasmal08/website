@@ -12,7 +12,7 @@ export default class ConsultationComponent extends Component {
           <h2 className="consultation_header">
             Unlock Your <span style={{ color: "#C267D1" }}>Dreams</span>
           </h2>
-          <p>
+          <p className="content_">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

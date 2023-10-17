@@ -21,10 +21,28 @@
     position: relative;
     text-align: center;
     .about_header {
-      color: #4c3347;
-      font-family: "Cormorant Garamond", "Sans-serif";
-      font-size: 64px;
-      font-weight: 700;
+      position: relative;
+      .bigstar_image {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -39%;
+        left: 39%;
+      }
+      .smallstar_image {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 39%;
+        bottom: -16%;
+      }
+      .about_ {
+        color: #4c3347;
+        font-family: "Cormorant Garamond", "serif";
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
     }
     .about_content {
       transition: background 0.3s, border 0.3s, border-radius 0.3s,
@@ -35,6 +53,76 @@
       font-family: "Poppins", "Sans-serif";
     }
   }
+
+  .home_page_about {
+    margin-top: 150px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1170px;
+    .home_page_about_rhs {
+      position: absolute;
+      left: 69%;
+      top: 13%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .description_header {
+        font-family: "Cormorant Garamond", "serif";
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 0px;
+      }
+
+      .subheader {
+        margin: 0;
+        color: #4c3347;
+        font-family: "Poppins", "Sans-serif";
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      .description_ {
+        width: 600px;
+        padding: 0% 5% 0% 0%;
+        color: #685b65;
+        font-family: "Poppins", "Sans-serif";
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .signature_image {
+        width: 120px;
+        height: 80px;
+      }
+    }
+
+    .home_page_about_image {
+      .about_image {
+        border-radius: 10px;
+        height: auto;
+        width: 350px;
+      }
+      .lineround_image {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        top: -15%;
+        right: 33%;
+      }
+      .blob_image {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        bottom: -16%;
+        left: 30%;
+        z-index: -1;
+      }
+    }
+  }
   .about_quotes_wrapper {
     transition: background 0.3s, border 0.3s, border-radius 0.3s,
       box-shadow 0.3s;
@@ -43,6 +131,34 @@
     padding: 100px 0px 100px 0px;
     background-color: #fef4ea;
     text-align: center;
+
+    .quotes_image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .header_ {
+      color: #4c3347;
+      font-family: "Cormorant Garamond", "serif";
+      font-size: 48px;
+      font-weight: 600;
+      text-align: center;
+      max-width: 1140px;
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .author {
+      color: #7a7a7a;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "Poppins", "Sans-serif";
+    }
   }
 
   .about_journey_wrapper {
@@ -77,9 +193,28 @@
         position: relative;
         width: 100%;
         flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
         justify-content: center;
+
+        .journey_ {
+          color: #4c3347;
+          font-family: "Poppins", "Sans-serif";
+          font-size: 18px;
+          font-weight: 400;
+          margin: 0;
+        }
+        .many_ {
+          color: #4c3347;
+          font-family: "Cormorant Garamond", "serif";
+          font-size: 40px;
+          font-weight: 600;
+          margin-top: 5px;
+        }
+        .journey_content {
+          color: #7a7a7a;
+          font-family: "Poppins", "Sans-serif";
+          font-size: 16px;
+          font-weight: 400;
+        }
         .journey_cards_wrapper {
           margin-top: 20px;
           margin-bottom: 0px;
@@ -96,8 +231,33 @@
             padding: 0px 15px 0px 0px;
             position: relative;
             width: 100%;
-            flex-wrap: wrap;
-            align-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            .icon_ {
+              width: 50px;
+              height: 50px;
+              margin: 0;
+            }
+
+            .count_ {
+              color: #4c3347;
+              font-family: "Poppins", "Sans-serif";
+              font-size: 40px;
+              font-weight: 500;
+              margin: 0;
+            }
+
+            .header_ {
+              margin: 0;
+              width: 180px;
+              display: flex;
+              justify-content: center;
+              color: #4c3347;
+              font-family: "Poppins", "Sans-serif";
+              font-size: 14px;
+              font-weight: 400;
+            }
           }
         }
       }
@@ -159,6 +319,24 @@
       margin-left: auto;
       position: relative;
       max-width: 1140px;
+      gap: 10px;
+
+      .unlock_ {
+        color: #fff;
+        font-family: "Cormorant Garamond", "serif";
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .content_ {
+        color: #fff;
+        font-family: "Poppins", "Sans-serif";
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        width: 43vw;
+      }
     }
   }
 }

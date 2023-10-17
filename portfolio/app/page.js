@@ -24,7 +24,6 @@ export default class page extends Component {
         <ConsultationComponent />
         <BlogComponent />
         <Footer />
-        <div></div>
       </div>
     );
   }

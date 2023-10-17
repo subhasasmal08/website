@@ -9,6 +9,9 @@ import Footer from "../component/Footer/Footer";
 import journey from "../../public/assets/Images/journey.jpeg";
 import lineround from "../../public/assets/Images/Line-round.png";
 import blob from "../../public/assets/Images/Blob.png";
+import about from "../../public/assets/Images/about.jpg";
+import signature from "../../public/assets/Images/signature.png";
+import BigStar from "../../public/assets/Images/Bigstar.png";
 
 export default class page extends Component {
   renderJourneyData = [
@@ -28,29 +31,92 @@ export default class page extends Component {
       count: 35,
     },
   ];
+
+  renderCountDivData = [
+    { name: "persons_mentored", number: 80 },
+    { name: "seminar_speaker", number: 35 },
+    { name: "coaching_certificates", number: 12 },
+  ];
   render() {
     return (
       <div className="about_wrapper">
         <div className="about_top_wrapper">
-          <h2 className="about_header">About Me</h2>
+          <div className="about_header">
+            <Image
+              src={BigStar}
+              alt="BigStar"
+              className="bigstar_image"
+              placeholder="blur"
+            />
+            <h2 className="about_">About Me</h2>
+            <Image
+              src={BigStar}
+              alt="smallStar"
+              className="smallstar_image"
+              placeholder="blur"
+            />
+          </div>
           <p className="about_content">Get to know me more</p>
         </div>
-        <AboutComponent />
+        <div className="home_page_about">
+          <div className="home_page_about_rhs">
+            <h2 className="description_header">
+              Hi, I'm <span style={{ color: "#F49785" }}>Ammelia</span>
+            </h2>
+            <p className="subheader">Life coach and master of goals.</p>
+            <div className="description_">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </div>
+            <Image
+              src={signature}
+              alt="signature"
+              className="signature_image"
+              placeholder="blur"
+            />
+          </div>
+          <div className="home_page_about_image">
+            <Image
+              src={about}
+              alt="about"
+              className="about_image"
+              placeholder="blur"
+            />
+            <Image
+              src={lineround}
+              alt="lineround"
+              className="lineround_image"
+              placeholder="blur"
+            />
+            <Image
+              src={blob}
+              alt="blob"
+              className="blob_image"
+              placeholder="blur"
+            />
+          </div>
+        </div>
         <div className="about_quotes_wrapper">
-          <Quotes />
-          <h2>
+          <Quotes className="quotes_image" />
+          <h2 className="header_">
             "The whole secret of a successful life is to find out what is one’s
             destiny to do, and then do it."
           </h2>
-          <p>-Hery Ford</p>
+          <p className="author">-Hery Ford</p>
         </div>
         <div className="about_journey_wrapper">
           <div className="about_"></div>
           <div className="about_journey_subwrapper">
             <div className="journey_lhs">
-              <p>My Journey</p>
-              <h2>Many Twist & Turns</h2>
-              <p>
+              <p className="journey_">My Journey</p>
+              <h2 className="many_">
+                Many <span style={{ color: "#F49785" }}>Twist & Turns</span>
+              </h2>
+              <p className="journey_content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -61,9 +127,9 @@ export default class page extends Component {
                 {this.renderJourneyData.map((item) => {
                   return (
                     <div className="journey_card">
-                      <p>{item.icon}</p>
-                      <p>{item.count}</p>
-                      <p>{item.header}</p>
+                      <p className="icon_">{item.icon}</p>
+                      <p className="count_">{item.count}</p>
+                      <p className="header_">{item.header}</p>
                     </div>
                   );
                 })}
@@ -94,10 +160,10 @@ export default class page extends Component {
         <div className="about_dreams_wrapper">
           <div className="dreams_"></div>
           <div className="about_journey_subwrapper">
-            <h2>
-              Unlock Your <span style={{ color: "#F49785" }}>Dreams</span>
+            <h2 className="unlock_">
+              Unlock Your <span style={{ color: "#C267D1" }}>Dreams</span>
             </h2>
-            <p>
+            <p className="content_">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

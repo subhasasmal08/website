@@ -43,7 +43,8 @@ class Child extends Component {
   render() {
     return (
       <nav className="navbar">
-        <Image src={logo} alt="logo" className="logo" placeholder="blur" />
+      <div className="navbar_subwrapper">
+      <Image src={logo} alt="logo" className="logo" placeholder="blur" />
         <ul className="navbar_ul">
           {this.navbarArr.map((item) => (
             <li
@@ -124,6 +125,7 @@ class Child extends Component {
           <Twitter />
           <Youtube />
         </div>
+      </div>
       </nav>
     );
   }
@@ -192,7 +194,7 @@ export const FaceBook = (props) => (
   </svg>
 );
 
-const Down = (props) => (
+ export const Down = (props) => (
   <svg
     width="24px"
     height="24px"

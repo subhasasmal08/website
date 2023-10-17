@@ -1,11 +1,15 @@
 import { Plan, Tick } from "@/app/page";
 import React, { Component } from "react";
-import "./plancomponent.scss"
+import "./plancomponent.scss";
+import Image from "next/image";
+import base from "../../../public/assets/Images/base.png";
+import pro from "../../../public/assets/Images/pro.png";
+import elite from "../../../public/assets/Images/elite.png";
 
 export default class PlanComponent extends Component {
   renderPlanData = [
     {
-      icon: <Plan />,
+      icon: base,
       header: "Base Plan",
       Subheader: "What you'll get",
       points: [
@@ -16,10 +20,10 @@ export default class PlanComponent extends Component {
         "Development Perspective",
         "Career Advice",
       ],
-      price: "$65/Month",
+      price: "$65",
     },
     {
-      icon: <Plan />,
+      icon: pro,
       header: "Pro Plan",
       Subheader: "What you'll get",
       points: [
@@ -31,10 +35,10 @@ export default class PlanComponent extends Component {
         "Career Advice",
         "Support Over Email",
       ],
-      price: "$65/Month",
+      price: "$65",
     },
     {
-      icon: <Plan />,
+      icon: elite,
       header: "Elite Plan",
       Subheader: "What you'll get",
       points: [
@@ -45,7 +49,7 @@ export default class PlanComponent extends Component {
         "Development Perspective",
         "Career Advice",
       ],
-      price: "$65/Month",
+      price: "$65",
     },
   ];
   render() {
@@ -63,9 +67,24 @@ export default class PlanComponent extends Component {
           <div className="plan_cards_wrapper">
             {this.renderPlanData.map((item, index) => {
               return (
-                <div className={index === 1 ? "plan_card middle" : "plan_card"}>
+                <div
+                  className={
+                    index === 0
+                      ? "plan_card start"
+                      : index === 1
+                      ? "plan_card middle"
+                      : index === 2
+                      ? "plan_card end"
+                      : "plan_card"
+                  }
+                >
                   <div className="upper_plan_card">
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      alt="plan_images"
+                      className="plan_images"
+                      placeholder="blur"
+                    />
                     <p className="plan_card_header">{item.header}</p>
                     <p className="plan_subheader">{item.Subheader}</p>
                   </div>
@@ -74,15 +93,26 @@ export default class PlanComponent extends Component {
                       return (
                         <p className="tick_sen">
                           <Tick />
-                          {data}
+                          <p className="sentence_">{data}</p>
                         </p>
                       );
                     })}
                   </div>
                   <p className="line"></p>
                   <div className="pricing_wrapper">
-                    <p>{item.price}</p>
-                    <button className="btn">Book a session</button>
+                    <p className="price_">
+                      {item.price}
+                      <span
+                        style={{
+                          color: "#4c3347",
+                          fontSize: "16px",
+                          fontWeight: "400",
+                        }}
+                      >
+                        /Month
+                      </span>
+                    </p>
+                    <button className="btn">Book A session</button>
                   </div>
                 </div>
               );

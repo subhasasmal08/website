@@ -1,6 +1,7 @@
 import { Arrow } from "@/app/page";
 import React, { Component } from "react";
-import "./blogcomponent.scss"
+import "./blogcomponent.scss";
+import { Clock } from "@/app/SingleBlog/page";
 
 export default class BlogComponent extends Component {
   renderBlogCards = [
@@ -33,15 +34,19 @@ export default class BlogComponent extends Component {
           <h2 className="blog_header">
             Latest <span style={{ color: "#C267D1" }}>Blog</span>
           </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div className="blog_cards_Wrapper">
+          <p className="subheader">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div className="blog_cards_wrapper">
             {this.renderBlogCards.map((item) => {
               return (
                 <div className="blog_card">
                   <img src={item.image} className="blog_image"></img>
-                  <p>{item.header}</p>
-                  <p>{item.date}</p>
-                  <p>{item.content}</p>
+                  <p className="header_">{item.header}</p>
+                  <p className="date_">
+                    <Clock /> {item.date}
+                  </p>
+                  <p className="content_">{item.content}</p>
                   <div className="read_more_">
                     Read more
                     <Arrow />

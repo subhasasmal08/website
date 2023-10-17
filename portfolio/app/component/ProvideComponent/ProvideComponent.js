@@ -7,8 +7,14 @@ import {
 } from "@/app/page";
 import React, { Component } from "react";
 import Image from "next/image";
-import about from "../../../public/assets/Images/about.jpg";
+import provide from "../../../public/assets/Images/provide.jpg";
 import "./providecomponent.scss";
+import passion from "../../../public/assets/Images/passion.png";
+import stress from "../../../public/assets/Images/stress.png";
+import problem from "../../../public/assets/Images/problem.png";
+import growth from "../../../public/assets/Images/growth.png";
+import relationships from "../../../public/assets/Images/relationships.png";
+import life from "../../../public/assets/Images/life.png";
 
 export default class ProvideComponent extends Component {
   constructor(props) {
@@ -26,32 +32,32 @@ export default class ProvideComponent extends Component {
             {
               header: "Identifying Passion",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <Direction />,
+              icon: passion,
             },
             {
               header: "Stress Control",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <StressControl />,
+              icon: stress,
             },
             {
               header: "Problem Solving",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <ProblemSolving />,
+              icon: problem,
             },
             {
               header: "Growth Career",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <GrowthCareer />,
+              icon: growth,
             },
             {
               header: "Relationships",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <Relationship />,
+              icon: relationships,
             },
             {
               header: "Life Balance",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <LifeBalance />,
+              icon: life,
             },
           ],
         })
@@ -60,22 +66,22 @@ export default class ProvideComponent extends Component {
             {
               header: "Identifying Passion",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <Direction />,
+              icon: passion,
             },
             {
               header: "Stress Control",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <StressControl />,
+              icon: stress,
             },
             {
               header: "Problem Solving",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <ProblemSolving />,
+              icon: problem,
             },
             {
               header: "Growth Career",
               desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-              icon: <GrowthCareer />,
+              icon: growth,
             },
           ],
         });
@@ -83,7 +89,13 @@ export default class ProvideComponent extends Component {
 
   render() {
     return (
-      <div className="home_page_provide">
+      <div
+        style={{
+          maxWidth: this.props.type !== "home_service" ? "1140px" : "none",
+          paddingLeft: this.props.type !== "home_service" ? "none" : "100px",
+        }}
+        className="home_page_provide"
+      >
         <div className="home_page_provide_lhs">
           <div
             className="upper_"
@@ -97,7 +109,12 @@ export default class ProvideComponent extends Component {
             <h2 className="upper_header">
               What I <span style={{ color: "#F49785" }}>Provide</span>
             </h2>
-            <div className="provide_desc">
+            <div
+              style={{
+                textAlign: this.props.type === "home_service" && "left",
+              }}
+              className="provide_desc"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Aliquam ut porttitor leo.
@@ -106,13 +123,22 @@ export default class ProvideComponent extends Component {
           <div
             className="lower_"
             style={{
-              justifyContent: this.props.type === "service" && "space-between",
+              justifyContent:
+                this.props.type === "service" ? "space-between" : "flex-start",
+              gap: this.props.type === "home_service" && "10px",
             }}
           >
             {this.state.renderProvideData.map((item) => {
               return (
                 <div className="provide_cards">
-                  {item.icon}
+                  <div style={{ height: "100%" }}>
+                    <Image
+                      src={item.icon}
+                      alt="provide_images"
+                      className="provide_images"
+                      placeholder="blur"
+                    />
+                  </div>
                   <div className="provide_cards_wrapper">
                     <p className="provide_header">{item.header}</p>
                     <div className="provide_content">{item.desc}</div>
@@ -129,11 +155,12 @@ export default class ProvideComponent extends Component {
         {this.props.type === "home_service" && (
           <div className="home_page_provide_rhs">
             <Image
-              src={about}
-              alt="about"
-              className="about_image"
+              src={provide}
+              alt="provide"
+              className="provide_image"
               placeholder="blur"
             />
+            <div className="image_"></div>
           </div>
         )}
       </div>
