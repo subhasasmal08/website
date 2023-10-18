@@ -8,8 +8,10 @@ import { Clock } from "../SingleBlog/page";
 import mindfullness from "../../public/assets/Images/mindfullness.jpg";
 import worklife from "../../public/assets/Images/worklife.jpg";
 import BigStar from "../../public/assets/Images/Bigstar.png";
+import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 
-export default class Page extends Component {
+class Child extends Component {
   renderBlogCards = [
     {
       image: mindfullness,
@@ -45,21 +47,21 @@ export default class Page extends Component {
       <div className="blog_wrapper">
         <div className="blog_top_wrapper">
           <div className="blog_header_wrapper">
-          <Image
-            src={BigStar}
-            alt="BigStar"
-            className="bigstar_image"
-            placeholder="blur"
-          />
-          <h2 className="blog_header">Blogs</h2>
-          <Image
-            src={BigStar}
-            alt="smallStar"
-            className="smallstar_image"
-            placeholder="blur"
-          />
+            <Image
+              src={BigStar}
+              alt="BigStar"
+              className="bigstar_image"
+              placeholder="blur"
+            />
+            <h2 className="blog_header">Blogs</h2>
+            <Image
+              src={BigStar}
+              alt="smallStar"
+              className="smallstar_image"
+              placeholder="blur"
+            />
           </div>
-      
+
           <p className="blog_content">Stay update about blog and article</p>
         </div>
         <div className="blog_subwrapper">
@@ -73,7 +75,26 @@ export default class Page extends Component {
                     className="related_image"
                     placeholder="blur"
                   />
-                  <p className="header_">{item.header}</p>
+                  <p
+                    onClick={() => {
+                      this.props.router.replace("/SingleBlog", "subha", {
+                        shallow: true,
+                      });
+                    }}
+                    className="header_"
+                  >
+                    {item.header}
+                  </p>
+
+                  {/* <Link
+                    className="header_"
+                    href={"/SingleBlog"}
+                    as={`/SingleBlog${"data"}`}
+                    passHref
+                  >
+                    {item.header}
+                  </Link> */}
+
                   <p className="date_">
                     <Clock className="clock_" />
                     {item.date}
@@ -127,6 +148,14 @@ export default class Page extends Component {
     );
   }
 }
+
+const Page = (props) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  return <Child {...props} router={router} pathname={pathname} />;
+};
+
+export default Page;
 
 const Search = (props) => (
   <svg

@@ -8,6 +8,18 @@ import worklife from "../../public/assets/Images/worklife.jpg";
 import { Insta, Twitter, Youtube } from "../component/Navbar/Navbar";
 
 export default class page extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeBlog: {
+        picture: mindfullness,
+        header: "Mind Mapping for Mindfulness",
+        date: "NOVEMBER 5, 2021",
+        content: "",
+      },
+    };
+  }
   realtedPostData = [
     {
       picture: mindfullness,
@@ -20,18 +32,19 @@ export default class page extends Component {
       date: "NOVEMBER 5, 2021",
     },
   ];
+
   render() {
     return (
       <div className="single_blog_wrapper">
         <div className="single_blog_subwrapper">
           <div className="mind_wrapper">
-            <h2 className="header_">Mind Mapping for Mindfulness</h2>
+            <h2 id="single_blog"  className="header_">{this.state.activeBlog.header}</h2>
             <div className="date_wrapper">
               <Clock />
-              <p className="date_">NOVEMBER 5, 2021</p>
+              <p className="date_">{this.state.activeBlog.date}</p>
             </div>
             <Image
-              src={mindfullness}
+              src={this.state.activeBlog.picture}
               alt="Mindfullness"
               className="Mindfullness_image"
               placeholder="blur"
@@ -107,7 +120,22 @@ export default class page extends Component {
                       className="related_image"
                       placeholder="blur"
                     />
-                    <p className="header_">{item.header}</p>
+                    <a
+                    href="#single_blog"
+                      onClick={() => {
+                        this.setState({
+                          activeBlog: {
+                            picture: item.picture,
+                            header: item.header,
+                            date: item.date,
+                            content: "",
+                          },
+                        });
+                      }}
+                      className="header_"
+                    >
+                      {item.header}
+                    </a>
                     <p className="date_">
                       <Clock className="clock_" />
                       {item.date}
